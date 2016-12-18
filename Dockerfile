@@ -75,7 +75,7 @@ RUN cp -a /openhab/userdata /openhab/userdata.dist && \
     cp -a /openhab/conf /openhab/conf.dist
 COPY entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]
-RUN chmod +x entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 RUN chown -R openhab:openhab ${APPDIR}
 
