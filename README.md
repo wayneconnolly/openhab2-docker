@@ -28,7 +28,7 @@ sudo chown -R openhab:openhab openhab
 ```
 docker run --name=openhab --net=host -v /etc/localtime:/etc/localtime:ro -v /etc/timezone:/etc/timezone:ro --restart always -d openhab:amd64-offline
 ```
-* TCopied the docker contents to my host with the below (find your own container ID via docker ps
+* Copied the docker contents to my host with the below (find your own container ID via docker ps
 ```
 docker cp 07860dca4899:/openhab /home/kodi/docker/openhab
 ```
@@ -37,6 +37,6 @@ docker cp 07860dca4899:/openhab /home/kodi/docker/openhab
 docker run --name=openhab --net=host -v /etc/localtime:/etc/localtime:ro -v /etc/timezone:/etc/timezone:ro -v /home/kodi/docker/openhab/conf:/openhab/conf -v /home/kodi/docker/openhab/userdata:/openhab/userdata -v /home/kodi/docker/openhab/addons:/openhab/addons --restart always -d openhab/openhab
 ```
 
-Now I have a stable and persistent openhab running.
+* Now we have a stable and persistent openhab running.
 
 Hope this helps someone.
